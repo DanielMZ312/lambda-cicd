@@ -15,14 +15,14 @@ Resources:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
-    Tags:
-      - Key: Environment
-        Value: !Ref Environment
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
 
-  Outputs:
-    bucketName:
-      Description: 'Name of created S3 Bucket'
-      Value: !Ref MyS3Bucket
+Outputs:
+  bucketName:
+    Description: 'Name of created S3 Bucket'
+    Value: !Ref MyS3Bucket
 
 
 # test workflow
